@@ -1,0 +1,11 @@
+<!-- canvas.wxml -->
+
+
+<movable-area class='album'>
+  <movable-view wx:for='{{photoList}}' style='z-index:{{1000-index}};' x='{{x[index]}}' y='{{y[index]}}'  class='photo' damping='100' direction='all' bindchange='move' bindtouchend='moveover' hidden='{{hiddenP[index]}}'  animation='{{disappearAnimation[index]}}' data-index='{{index}}'>
+  {{index}}
+  </movable-view>
+</movable-area>
+
+
+
