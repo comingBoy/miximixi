@@ -1,0 +1,289 @@
+/* pages/randomMeal/randomMeal.wxss */
+
+page {
+  height: 100%;
+}
+
+.container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.headBar {
+  width: 100%;
+  height: 10%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.headBarImg {
+  width: 80rpx;
+  height: 80rpx;
+  margin: 20rpx;
+}
+
+.budget {
+  display: flex;
+  width: 100%;
+  justify-content: flex-end;
+  height: 10%;
+}
+
+.budgetInput {
+  width: 100rpx;
+  color: #28acb0;
+}
+
+.chooseBox {
+  background-color: #fff;
+  width: 70%;
+  height: 60%;
+  border-radius: 50rpx;
+  box-shadow: 10rpx 10rpx 10rpx #bebebe;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+}
+
+.recharge {
+  background: white;
+  width: 90%;
+  height: 250rpx;
+  font-size: 30rpx;
+  color: #858585;
+  border-radius: 10rpx;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.rechargeTitle {
+  margin: 40rpx;
+}
+
+.rechargeAmountBox {
+  display: flex;
+  margin-left: 40rpx;
+  font-size: 40rpx;
+  color: black;
+  align-items: center;
+  margin-bottom: 40rpx;
+  font-weight: 900;
+}
+
+.rechargeAmount {
+  font-size: 90rpx;
+  height: 90rpx;
+}
+
+.comfirmRecharge {
+  width: 90%;
+  background-color: #28acb0;
+  color: white;
+  margin-top: 50rpx;
+  font-size: 35rpx;
+}
+
+.showBudget {
+  display: flex;
+  font-size: 40rpx;
+  color: black;
+  align-items: center;
+  font-weight: 900;
+  opacity: 0;
+  margin-right: 20rpx;
+}
+
+.showBudgetInput {
+  font-size: 90rpx;
+  height: 90rpx;
+  width: 125rpx;
+}
+
+.chooseContainer {
+  background-color: #fff;
+  width: 100%;
+  height: 100%;
+  border-radius: 50rpx;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+}
+
+.chooseContainer1 {
+  background-color: #fff;
+  width: 100%;
+  height: 70%;
+  border-radius: 50rpx;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+}
+
+.chooseContainer2 {
+  background-color: #fff;
+  width: 100%;
+  height: 70%;
+  border-radius: 50rpx;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  transform-origin: 0 100%;
+  transform: scale(0, 0);
+}
+
+.chooseLike {
+  position: absolute;
+  bottom: 0;
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 20rpx;
+  width: 100%;
+}
+
+.chooseButton1 {
+  border: solid #f6f6f6 12rpx;
+  height: 80rpx;
+  width: 80rpx;
+  border-radius: 80rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.likeImg {
+  width: 70rpx;
+  height: 70rpx;
+}
+
+.chooseButton2 {
+  border: solid #f6f6f6 12rpx;
+  height: 60rpx;
+  width: 60rpx;
+  border-radius: 60rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.likeImg2 {
+  width: 50rpx;
+  height: 50rpx;
+}
+
+.screenBox {
+  width: 92%;
+  height: 150rpx;
+  background-color: white;
+  position: fixed;
+  bottom: 18rpx;
+  border-radius: 30rpx;
+  box-shadow: 10rpx 10rpx 10rpx #bebebe;
+}
+
+.checkbox {
+  border: #28acb0;
+  font-size: 30rpx;
+  font-weight: 700;
+  margin-left: 40rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.checkboxGroup {
+  display: flex;
+  flex-wrap: wrap;
+  height: 100%;
+  width: 100%;
+  align-items: space-around;
+}
+
+.menuBack {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  background: #000;
+  opacity: 0.5;
+  overflow: hidden;
+}
+
+.menu {
+  width: 80%;
+  height: 840rpx;
+  overflow: hidden;
+  position: fixed;
+  left: 0;
+  z-index: 1001;
+  background: #fff;
+  bottom: 0rpx;
+  display: flex;
+  flex-direction: column;
+  right: 0;
+  margin: auto;
+  border-radius: 50rpx 50rpx 0 0;
+}
+
+.avatarBox {
+  display: flex;
+  justify-content: center;
+}
+
+.avatar {
+  width: 120rpx;
+  height: 120rpx;
+  border-radius: 120rpx;
+}
+
+.userInfo {
+  padding: 20rpx;
+  font-size: 30rpx;
+}
+
+.nickName {
+  display: flex;
+  justify-content: center;
+  margin-top: 20rpx;
+}
+
+.menuFrame {
+  width: 100%;
+  height: 100%;
+}
+
+.menuContentList {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  height: 100rpx;
+}
+
+.contentImg {
+  height: 100rpx;
+  width: 100rpx;
+  margin-left: 50rpx;
+}
+
+.contentText {
+  font-size: 35rpx;
+  font-weight: 700;
+  margin-left: 50rpx;
+}

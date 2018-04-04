@@ -1,0 +1,105 @@
+<!--pages/randomMeal/randomMeal.wxml-->
+
+<view class='container'>
+  <!--头部导航栏-->
+  <view class='headBar'>
+    <image class='headBarImg' src='../../images/menu.png' bindtap='showMenu'></image>
+    <image class='headBarImg' src='../../images/customerService.png'>
+      <button open-type='contact' plain='true' style="width: 100rpx;height: 100rpx;position: fixed;top: 0; border: #f6f6f6;">
+      </button>
+    </image>
+  </view>
+
+  <!--预算-->
+  <view class='budget'>
+    <view class='showBudget' wx:if='{{ifShowBudget}}' animation='{{budgetAnimationData}}'>
+      ￥
+      <input class='showBudgetInput' value='{{budget}}' type='number' maxlength='2' bindinput='inputBudget'>
+      </input>
+    </view>
+  </view>
+
+  <!--选项框-->
+  <view class='chooseBox'>
+    <!--选项框首页输入预算-->
+    <view class='chooseContainer' style='z-index:1000' animation='{{inputBudgetAnimationData}}'>
+      <view class='recharge' wx:if='{{ifShowRecharge}}'>
+        <view class='rechargeTitle'>
+          输入预算
+        </view>
+        <view class='rechargeAmountBox'>
+          ￥
+          <input class='rechargeAmount' type='number' confirm-type='完成' placeholder='0' placeholder-style='color:black' value='{{budget}}' maxlength='2' bindinput='inputBudget'>
+          </input>
+        </view>
+      </view>
+      <button class='comfirmRecharge' bindtap='comfirmBudget'>确认</button>
+    </view>
+    <view class='chooseContainer1' style='z-index:999' animation='{{chooseAnimation1}}'>
+      123
+    </view>
+    <view class='chooseContainer2' style='z-index:998' animation='{{chooseAnimation2}}'>
+      234
+    </view>
+    <view class='chooseLike'>
+      <view class='chooseButton2' bindtap='dislike' bindtouchstart='beChoosedStart' bindtouchend='beChoosedEnd' data-src='superDislike' animation='{{superDislikeAnimation}}'>
+        <image src='../../images/superDislike.png' class='likeImg2'></image>
+      </view>
+      <view class='chooseButton1' bindtap='dislike' bindtouchstart='beChoosedStart' bindtouchend='beChoosedEnd' data-src='dislike' animation='{{dislikeAnimation}}'>
+        <image src='../../images/dislike.png' class='likeImg'></image>
+      </view>
+      <view class='chooseButton1' bindtap='like' bindtouchstart='beChoosedStart' bindtouchend='beChoosedEnd' data-src='like' animation='{{likeAnimation}}'>
+        <image src='../../images/like.png' class='likeImg'></image>
+      </view>
+      <view class='chooseButton2' bindtap='like' bindtouchstart='beChoosedStart' bindtouchend='beChoosedEnd' data-src='superLike' animation='{{superLikeAnimation}}'>
+        <image src='../../images/superLike.png' class='likeImg2'></image>
+      </view>
+    </view>
+  </view>
+  <view class='screenBox'>
+    <checkbox-group bindchange="checkboxChange" class='checkboxGroup'>
+      <label class="checkbox" wx:for="{{items}}">
+        <checkbox color='#28ACB0' class='checkBox' value="{{item.value}}" checked="{{item.checked}}" />{{item.value}}
+      </label>
+    </checkbox-group>
+  </view>
+
+</view>
+
+<view class='menuBox' hidden='{{ifHiddenMenu}}'>
+  <view class='menuBack' animation='{{menuBackAnimation}}' bindtap='hiddenMenu'>
+  </view>
+  <view class='menu' animation='{{menuAnimation}}'>
+    <scroll-view class='menuFrame' scroll-y='true'>
+      <view class='userInfo'>
+        <view class='avatarBox'>
+          <image class='avatar' src='{{userInfo.avatarUrl}}'></image>
+        </view>
+        <view class='nickName'>
+          {{userInfo.nickName}}
+        </view>
+      </view>
+      <view class='menuContentBox'>
+        <view class='menuContentList'>
+          <image src='../../images/eat.png' class='contentImg'></image>
+          <view class='contentText'>咪西咪西</view>
+        </view>
+        <view class='menuContentList'>
+          <image src='../../images/shop.png' style="height: 70rpx;width: 70rpx;margin-left: 65rpx;margin-right: 15rpx;" class='contentImg'></image>
+          <view class='contentText'>店铺</view>
+        </view>
+        <view class='menuContentList'>
+          <image src='../../images/address.png' style="height: 70rpx;width: 70rpx;margin-left: 65rpx;margin-right: 15rpx;" class='contentImg'></image>
+          <view class='contentText'>外卖地址</view>
+        </view>
+        <view class='menuContentList'>
+          <image src='../../images/phone.png'  style="height: 70rpx;width: 70rpx;margin-left: 65rpx;margin-right: 15rpx;" class='contentImg'></image>
+          <view class='contentText'>通知电话</view>
+        </view>                <view class='menuContentList'>
+          <image src='../../images/order.png'  style="height: 70rpx;width: 70rpx;margin-left: 65rpx;margin-right: 15rpx;" class='contentImg'></image>
+          <view class='contentText'>订单</view>
+        </view>
+      </view>
+    </scroll-view>
+  </view>
+</view>
